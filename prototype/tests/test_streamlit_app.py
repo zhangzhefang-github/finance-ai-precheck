@@ -15,6 +15,12 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 
+def temporary_var_workspace(prefix: str) -> Path:
+    var_root = ROOT / "var"
+    var_root.mkdir(parents=True, exist_ok=True)
+    return Path(tempfile.mkdtemp(prefix=prefix, dir=var_root))
+
+
 class StreamlitAppTests(unittest.TestCase):
     def test_pass_report_exposes_feedback_with_incorrect_default(self) -> None:
         try:
@@ -97,7 +103,7 @@ class StreamlitAppTests(unittest.TestCase):
             self.skipTest("Streamlit is not installed")
         from prototype.document_ingestion import Repository, utc_now
 
-        workspace = Path(tempfile.mkdtemp(prefix="ingestion-ui-test-", dir=ROOT / "var"))
+        workspace = temporary_var_workspace("ingestion-ui-test-")
         db = workspace / "ingestion.sqlite3"
         repository = Repository(db)
         now = utc_now()
@@ -149,7 +155,7 @@ class StreamlitAppTests(unittest.TestCase):
         except ImportError:
             self.skipTest("Streamlit is not installed")
 
-        workspace = Path(tempfile.mkdtemp(prefix="evaluation-ui-test-", dir=ROOT / "var"))
+        workspace = temporary_var_workspace("evaluation-ui-test-")
         missing_db = workspace / "must-not-be-opened.sqlite3"
         try:
             with patch.dict(os.environ, {
@@ -200,7 +206,7 @@ class StreamlitAppTests(unittest.TestCase):
         except ImportError:
             self.skipTest("Streamlit is not installed")
 
-        workspace = Path(tempfile.mkdtemp(prefix="evaluation-ui-flow-", dir=ROOT / "var"))
+        workspace = temporary_var_workspace("evaluation-ui-flow-")
         artifacts = workspace / "artifacts"
 
         def widget(items, label):
