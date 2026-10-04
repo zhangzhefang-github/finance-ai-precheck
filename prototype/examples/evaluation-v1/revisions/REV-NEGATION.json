@@ -1,0 +1,105 @@
+{
+  "schema_version": "evaluation-v1",
+  "revision_id": "REV-NEGATION",
+  "case_id": "CASE-NEGATION",
+  "parent_revision_id": null,
+  "change_note": "初始合成输入。",
+  "created_at": "2026-10-03T00:00:00Z",
+  "payload": {
+    "claim_id": "MOCK-EVAL-CLAIM",
+    "claim": {
+      "claim_id": "MOCK-EVAL-CLAIM",
+      "claim_amount": "181.73",
+      "currency": "CNY",
+      "expense_category": "TRANSPORT",
+      "purpose": "本次未发生交通费用，请核对误填金额",
+      "invoice_extraction_id": "eval-extraction",
+      "data_classification": "MOCK"
+    },
+    "invoice_extraction": {
+      "fields": {
+        "invoice_code": "031002100000",
+        "invoice_number": "12345678",
+        "issue_date": "2024-01-02",
+        "service_name": "*运输服务*客运服务费",
+        "net_amount": "176.44",
+        "tax_amount": "5.29",
+        "total_amount": "181.73",
+        "tax_rate": "3%"
+      },
+      "field_sources": {
+        "service_name": [
+          {
+            "object_key": "mock/content_list.json",
+            "block_index": 8,
+            "page": 0,
+            "raw_text": "*运输服务*客运服务费"
+          }
+        ],
+        "total_amount": [
+          {
+            "object_key": "mock/content_list.json",
+            "block_index": 8,
+            "page": 0,
+            "raw_text": "（小写）￥181.73"
+          }
+        ]
+      },
+      "issues": [],
+      "schema_version": "invoice-v1",
+      "extractor_version": "synthetic-evaluation-v1",
+      "internal_consistency_result": "PASS"
+    },
+    "invoice_checks": [
+      {
+        "rule_id": "INV-AMOUNT-FORMAT-001",
+        "ruleset_version": "invoice-consistency-v1",
+        "result": "PASS",
+        "values": {},
+        "evidence": {},
+        "reason": "MOCK upstream check fixture; not executed by this evaluation"
+      },
+      {
+        "rule_id": "INV-AMOUNT-SUM-001",
+        "ruleset_version": "invoice-consistency-v1",
+        "result": "PASS",
+        "values": {},
+        "evidence": {},
+        "reason": "MOCK upstream check fixture; not executed by this evaluation"
+      },
+      {
+        "rule_id": "INV-DATE-001",
+        "ruleset_version": "invoice-consistency-v1",
+        "result": "PASS",
+        "values": {},
+        "evidence": {},
+        "reason": "MOCK upstream check fixture; not executed by this evaluation"
+      },
+      {
+        "rule_id": "INV-EXTRACTION-001",
+        "ruleset_version": "invoice-consistency-v1",
+        "result": "PASS",
+        "values": {},
+        "evidence": {},
+        "reason": "MOCK upstream check fixture; not executed by this evaluation"
+      },
+      {
+        "rule_id": "INV-REQUIRED-001",
+        "ruleset_version": "invoice-consistency-v1",
+        "result": "PASS",
+        "values": {},
+        "evidence": {},
+        "reason": "MOCK upstream check fixture; not executed by this evaluation"
+      },
+      {
+        "rule_id": "INV-TAX-RATE-001",
+        "ruleset_version": "invoice-consistency-v1",
+        "result": "PASS",
+        "values": {},
+        "evidence": {},
+        "reason": "MOCK upstream check fixture; not executed by this evaluation"
+      }
+    ]
+  },
+  "input_sha256": "b685c6b8a1335b9de65a341ce93ff740e7a9cbaf82cab0f089977c1eba5efe5d"
+}

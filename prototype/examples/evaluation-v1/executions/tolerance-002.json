@@ -1,0 +1,14 @@
+{
+  "amount_policy": {
+    "policy_id": "mock.amount.absolute_tolerance.v1",
+    "implementation_id": "mock.amount.absolute_tolerance.v1",
+    "parameters": {
+      "tolerance": "0.02",
+      "currency": "CNY"
+    }
+  },
+  "model": {
+    "mode": "disabled"
+  },
+  "fault": "none"
+}

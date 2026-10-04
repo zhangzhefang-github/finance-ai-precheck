@@ -1,0 +1,15 @@
+{
+  "amount_policy": {
+    "policy_id": "amount.strict_equal.v1",
+    "implementation_id": "amount.strict_equal.v1",
+    "parameters": {}
+  },
+  "model": {
+    "mode": "fake",
+    "error": {
+      "code": "MODEL_REQUEST_FAILED",
+      "message": "injected offline model timeout"
+    }
+  },
+  "fault": "none"
+}

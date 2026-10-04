@@ -1,0 +1,27 @@
+{
+  "schema_version": "evaluation-v1",
+  "case_id": "CASE-CORRECTION",
+  "title": "缺金额后补正重跑",
+  "description": "完全合成的离线工程实验，不代表企业制度或真实报销。",
+  "data_classification": "MOCK",
+  "declared_scope": {
+    "included": [
+      "申请与发票金额及币种比对",
+      "已保存发票检查的使用",
+      "事由与服务语义关系",
+      "离线预审执行与失败记录"
+    ],
+    "excluded": [
+      "发票真伪",
+      "企业额度制度",
+      "正式审批与付款"
+    ],
+    "expectations": [
+      "对明确否认发生的事由，不应仅因类别词相同判定支持。",
+      "缺失金额必须提示补充，补正不覆盖原始结果。",
+      "金额严格相等或按本次明确标注的 MOCK 容差判定。"
+    ]
+  },
+  "scope_sha256": "e98c13ba9e2b50022c9710914d4870b8c193d9c2da6028f8f9ab0f53b74504d1",
+  "created_at": "2026-10-03T00:00:00Z"
+}

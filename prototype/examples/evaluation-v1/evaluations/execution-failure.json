@@ -1,0 +1,28 @@
+{
+  "schema_version": "evaluation-v1",
+  "evaluator_id": "local-reviewer",
+  "target": {
+    "kind": "EXECUTION",
+    "stage": "PRECHECK"
+  },
+  "verdict": "CORRECT",
+  "scope_relation": "IN_SCOPE",
+  "expected": {
+    "execution_status": "FAILED"
+  },
+  "observed": {
+    "execution_status": "FAILED"
+  },
+  "reason": "注入 Provider 故障后，系统保留失败尝试而没有伪造业务报告。",
+  "basis": {
+    "kind": "IMPLEMENTATION_CONTRACT",
+    "ref": "evaluation-experiment-v1/6.1",
+    "quote": "ClaimProvider 在报告创建前抛出错误时记录 FAILED，报告为空。"
+  },
+  "evidence_refs": [
+    {
+      "root": "execution",
+      "pointer": "/failure"
+    }
+  ]
+}

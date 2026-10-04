@@ -1,0 +1,35 @@
+{
+  "data_classification": "MOCK",
+  "catalog_id": "MOCK-RULE-CATALOG",
+  "catalog_version": "MOCK-v0.1",
+  "rules": [
+    {
+      "data_classification": "MOCK",
+      "rule_id": "MOCK-LODGE-R001",
+      "rule_version": "MOCK-v0.1",
+      "scenario": "MOCK_LODGING",
+      "scope_key": "MOCK_SCOPE_ALPHA",
+      "effective_from": "2030-01-01",
+      "effective_to": "2030-12-31",
+      "rule_type": "REQUIRED_SUMMARIES",
+      "required_summary_types": [
+        "MOCK_HOTEL_INVOICE_SUMMARY",
+        "MOCK_PAYMENT_SUMMARY"
+      ]
+    },
+    {
+      "data_classification": "MOCK",
+      "rule_id": "MOCK-LODGE-R002",
+      "rule_version": "MOCK-v0.1",
+      "scenario": "MOCK_LODGING",
+      "scope_key": "MOCK_SCOPE_ALPHA",
+      "effective_from": "2030-01-01",
+      "effective_to": "2030-12-31",
+      "rule_type": "CONSISTENCY",
+      "checks": [
+        "AMOUNT_AND_CURRENCY",
+        "INVOICE_STAY_DATES"
+      ]
+    }
+  ]
+}

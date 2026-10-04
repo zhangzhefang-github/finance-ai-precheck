@@ -1,0 +1,40 @@
+{
+  "contract_version": "MOCK-CONTRACT-v0.1",
+  "data_classification": "MOCK",
+  "case_id": "MOCK-CASE-M1",
+  "expense": {
+    "expense_type": "MOCK_LODGING",
+    "claim_amount": "1280.00",
+    "currency": "CNY",
+    "stay_start": "2030-10-01",
+    "stay_end": "2030-10-03",
+    "nights": 2
+  },
+  "attachment_summaries": [
+    {
+      "summary_id": "MOCK-SUMMARY-INVOICE-M1",
+      "summary_type": "MOCK_HOTEL_INVOICE_SUMMARY",
+      "source_kind": "MOCK_GENERATED_SUMMARY",
+      "amount": "1280.00",
+      "currency": "CNY",
+      "stay_start": "2030-10-01",
+      "stay_end": "2030-10-03",
+      "summary_text": "MOCK：虚构酒店发票摘要"
+    },
+    {
+      "summary_id": "MOCK-SUMMARY-PAYMENT-M1",
+      "summary_type": "MOCK_PAYMENT_SUMMARY",
+      "source_kind": "MOCK_GENERATED_SUMMARY",
+      "amount": "1280.00",
+      "currency": "CNY",
+      "stay_start": null,
+      "stay_end": null,
+      "summary_text": "MOCK：虚构付款摘要"
+    }
+  ],
+  "rule_lookup": {
+    "scenario": "MOCK_LODGING",
+    "scope_key": "MOCK_SCOPE_ALPHA",
+    "effective_on": "2030-10-03"
+  }
+}

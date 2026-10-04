@@ -1,0 +1,33 @@
+{
+  "schema_version": "evaluation-v1",
+  "evaluator_id": "local-reviewer",
+  "target": {
+    "kind": "CHECK",
+    "check_id": "PRECHECK-SEMANTIC-001"
+  },
+  "verdict": "INCORRECT",
+  "scope_relation": "IN_SCOPE",
+  "finding_kind": "MISSED_ISSUE",
+  "expected": {
+    "result": "REVIEW"
+  },
+  "observed": {
+    "result": "PASS"
+  },
+  "reason": "Mock 原文否认费用发生，单纯类别匹配没有发现该问题。",
+  "basis": {
+    "kind": "CASE_MOCK_EXPECTATION",
+    "ref": "CASE-NEGATION/declared_scope",
+    "quote": "对明确否认发生的事由，不应仅因类别词相同判定支持。"
+  },
+  "evidence_refs": [
+    {
+      "root": "input",
+      "pointer": "/claim/purpose"
+    },
+    {
+      "root": "report",
+      "check_id": "PRECHECK-SEMANTIC-001"
+    }
+  ]
+}

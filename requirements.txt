@@ -1,0 +1,3 @@
+# Official Tencent Cloud COS XML Python SDK. MinerU HTTP calls use the standard library.
+cos-python-sdk-v5==1.9.44
+streamlit[pdf]>=1.40,<2

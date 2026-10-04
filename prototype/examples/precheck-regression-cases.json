@@ -1,0 +1,46 @@
+{
+  "data_classification": "MOCK",
+  "description": "脱敏离线回归样例；EXTRACTION_ID 由测试替换为合成发票提取 ID。",
+  "cases": [
+    {
+      "case_id": "GOLDEN-EQUAL-BASELINE",
+      "claim": {
+        "claim_id": "MOCK-REGRESSION-GOLDEN",
+        "claim_amount": "181.73",
+        "currency": "CNY",
+        "expense_category": "TRANSPORT",
+        "purpose": "市内打车拜访客户",
+        "invoice_extraction_id": "EXTRACTION_ID"
+      },
+      "expected_status": "PASS",
+      "expected_route": "baseline"
+    },
+    {
+      "case_id": "BAD-AMOUNT-MISMATCH",
+      "claim": {
+        "claim_id": "MOCK-REGRESSION-BAD-AMOUNT",
+        "claim_amount": "180.00",
+        "currency": "CNY",
+        "expense_category": "TRANSPORT",
+        "purpose": "市内打车拜访客户",
+        "invoice_extraction_id": "EXTRACTION_ID"
+      },
+      "expected_status": "REVIEW",
+      "expected_route": "baseline"
+    },
+    {
+      "case_id": "FAILURE-MODEL-UNAVAILABLE",
+      "claim": {
+        "claim_id": "MOCK-REGRESSION-MODEL-UNAVAILABLE",
+        "claim_amount": "181.73",
+        "currency": "CNY",
+        "expense_category": "OTHER",
+        "purpose": "项目协调相关费用",
+        "invoice_extraction_id": "EXTRACTION_ID"
+      },
+      "expected_status": "REVIEW",
+      "expected_route": "model_unavailable",
+      "expected_technical_code": "MODEL_NOT_CONFIGURED"
+    }
+  ]
+}

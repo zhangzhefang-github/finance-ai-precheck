@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*:Zone.Identifier
+*:WPSSyncID
+var/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+.idea/
+.vscode/
+docs/discovery/*.docx

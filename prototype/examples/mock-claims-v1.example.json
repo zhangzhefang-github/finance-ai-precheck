@@ -1,0 +1,13 @@
+{
+  "claims": [
+    {
+      "claim_id": "MOCK-CLAIM-EXAMPLE-001",
+      "data_classification": "MOCK",
+      "claim_amount": "200.00",
+      "currency": "CNY",
+      "expense_category": "BUSINESS_VISIT",
+      "purpose": "MOCK：前往客户办公地点进行项目沟通产生的市内往返费用",
+      "invoice_extraction_id": "replace-with-an-existing-extraction-id"
+    }
+  ]
+}

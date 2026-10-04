@@ -1,0 +1,11 @@
+{
+  "amount_policy": {
+    "policy_id": "amount.strict_equal.v1",
+    "implementation_id": "amount.strict_equal.v1",
+    "parameters": {}
+  },
+  "model": {
+    "mode": "disabled"
+  },
+  "fault": "none"
+}
