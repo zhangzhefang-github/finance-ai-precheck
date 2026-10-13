@@ -14,3 +14,5 @@ htmlcov/
 .idea/
 .vscode/
 docs/discovery/*.docx
+.agents/skills/developing-with-streamlit
+.claude/
